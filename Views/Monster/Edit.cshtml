@@ -1,0 +1,55 @@
+﻿@model prjCore.Models.Monster
+
+@{
+    ViewData["Title"] = "魔物編輯";
+}
+
+<h1>
+    <img src="~/lib/pic/魔物編輯-(黑色文字圖透明背景)_1.png"  width="150"  />
+</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="名稱" class="control-label"></label>
+                <input asp-for="名稱" class="form-control" />
+                <span asp-validation-for="名稱" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="種類" class="control-label"></label>
+                <input asp-for="種類" class="form-control" />
+                <span asp-validation-for="種類" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="弱點武器" class="control-label"></label>
+                <input asp-for="弱點武器" class="form-control" />
+                <span asp-validation-for="弱點武器" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="弱點部位" class="control-label"></label>
+                <input asp-for="弱點部位" class="form-control" />
+                <span asp-validation-for="弱點部位" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="弱點屬性" class="control-label"></label>
+                <input asp-for="弱點屬性" class="form-control" />
+                <span asp-validation-for="弱點屬性" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="儲存" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><img src="~/lib/pic/返回魔物列表-(黑色文字圖透明背景)_1.png" width="100" /></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

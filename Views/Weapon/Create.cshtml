@@ -1,0 +1,105 @@
+﻿@model prjCore.Models.Weapon
+
+@{
+    ViewData["Title"] = "武器新增";
+}
+
+<h1>
+    <img src="~/lib/pic/武器新增-(黑色文字圖透明背景)_1.png" width="150"/>
+</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="系列名稱" class="control-label"></label>
+                <input asp-for="系列名稱" class="form-control" />
+                <span asp-validation-for="系列名稱" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="大劍" class="control-label"></label>
+                <input asp-for="大劍" class="form-control" />
+                <span asp-validation-for="大劍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="單手劍" class="control-label"></label>
+                <input asp-for="單手劍" class="form-control" />
+                <span asp-validation-for="單手劍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="大錘" class="control-label"></label>
+                <input asp-for="大錘" class="form-control" />
+                <span asp-validation-for="大錘" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="長槍" class="control-label"></label>
+                <input asp-for="長槍" class="form-control" />
+                <span asp-validation-for="長槍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="斬擊斧" class="control-label"></label>
+                <input asp-for="斬擊斧" class="form-control" />
+                <span asp-validation-for="斬擊斧" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="操蟲棍" class="control-label"></label>
+                <input asp-for="操蟲棍" class="form-control" />
+                <span asp-validation-for="操蟲棍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="輕弩" class="control-label"></label>
+                <input asp-for="輕弩" class="form-control" />
+                <span asp-validation-for="輕弩" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="太刀" class="control-label"></label>
+                <input asp-for="太刀" class="form-control" />
+                <span asp-validation-for="太刀" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="雙劍" class="control-label"></label>
+                <input asp-for="雙劍" class="form-control" />
+                <span asp-validation-for="雙劍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="狩獵笛" class="control-label"></label>
+                <input asp-for="狩獵笛" class="form-control" />
+                <span asp-validation-for="狩獵笛" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="銃槍" class="control-label"></label>
+                <input asp-for="銃槍" class="form-control" />
+                <span asp-validation-for="銃槍" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="充能斧" class="control-label"></label>
+                <input asp-for="充能斧" class="form-control" />
+                <span asp-validation-for="充能斧" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="弓" class="control-label"></label>
+                <input asp-for="弓" class="form-control" />
+                <span asp-validation-for="弓" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="重弩" class="control-label"></label>
+                <input asp-for="重弩" class="form-control" />
+                <span asp-validation-for="重弩" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="新增武器" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">
+<img src="~/lib/pic/返回武器列表-(黑色文字圖透明背景)_1.png" width="100"/></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

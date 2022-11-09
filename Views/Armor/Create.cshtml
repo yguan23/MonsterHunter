@@ -1,0 +1,61 @@
+﻿@model prjCore.Models.Armor
+
+@{
+    ViewData["Title"] = "防具新增";
+}
+@*防具新增按鈕連結之內容*@
+<h1>
+    <img src="~/lib/pic/防具新增-(黑色文字圖透明背景)_1.png" width="150" />
+</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="系列名稱" class="control-label"></label>
+                <input asp-for="系列名稱" class="form-control" />
+                <span asp-validation-for="系列名稱" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="頭盔" class="control-label"></label>
+                <input asp-for="頭盔" class="form-control" />
+                <span asp-validation-for="頭盔" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="鎧甲" class="control-label"></label>
+                <input asp-for="鎧甲" class="form-control" />
+                <span asp-validation-for="鎧甲" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="腕甲" class="control-label"></label>
+                <input asp-for="腕甲" class="form-control" />
+                <span asp-validation-for="腕甲" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="腰甲" class="control-label"></label>
+                <input asp-for="腰甲" class="form-control" />
+                <span asp-validation-for="腰甲" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="護腿" class="control-label"></label>
+                <input asp-for="護腿" class="form-control" />
+                <span asp-validation-for="護腿" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="新增防具" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">@*連接Armor控制器的Index*@
+        <img src="~/lib/pic/返回防具列表-(黑色文字圖透明背景)_1.png" width="100" />
+    </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

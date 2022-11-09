@@ -1,0 +1,64 @@
+﻿@model prjCore.Models.Armor
+
+@{
+    ViewData["Title"] = "刪除防具";
+}
+@*防具列表刪除連結之內容*@
+<h1>
+    <img src="~/lib/pic/刪除防具-(黑色文字圖透明背景)_1.png" width="150" />
+</h1>
+
+<div>
+    <h4>
+        <img src="~/lib/pic/確定要刪除這個-(黑色文字圖透明背景)_1.png" height="50" />
+        <img src="~/lib/pic/防具_-(黑色文字圖透明背景)_1.png" height="50" />
+    </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.系列名稱)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.系列名稱)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.頭盔)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.頭盔)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.鎧甲)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.鎧甲)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.腕甲)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.腕甲)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.腰甲)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.腰甲)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.護腿)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.護腿)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="刪除" class="btn btn-danger" />
+        <a asp-action="Index">
+            @*連接Armor控制器的Index*@
+                <img src="~/lib/pic/返回防具列表-(黑色文字圖透明背景)_1.png" width="100" />
+            </a>
+    </form>
+</div>
