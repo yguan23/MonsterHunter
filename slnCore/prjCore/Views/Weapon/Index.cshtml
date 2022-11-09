@@ -1,0 +1,138 @@
+﻿@model IEnumerable<prjCore.Models.Weapon>
+
+@{
+    ViewData["Title"] = "武器列表";
+}
+
+
+    <h1>
+        <img src="~/lib/pic/武器列表-(黑色文字圖透明背景)_1.png" width="150" />
+    </h1>
+    <p>
+
+
+        @using (Html.BeginForm("ShowQuery", "Weapon"))
+        {
+    <p>
+
+        <img src="~/lib/pic/系列名稱-(黑色文字圖透明背景)_1.png" width="100"/> : @Html.TextBox("keyword")
+        <input type="submit" value="查詢">
+    </p>
+    }
+        </p>
+
+        <table class="table table-hover " >
+            <thead style="width: 100%; top: 0; position: sticky; background-color: #FFFACD;">
+                <tr>
+                    <th>
+                        <img src="~/lib/pic/系列名稱-(黑色文字圖透明背景)_1.png" width="100" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/大劍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/單手劍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/大錘-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/長槍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/斬擊斧-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/操蟲棍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/輕弩-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/太刀-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/雙劍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/狩獵笛-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/銃槍-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/充能斧-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/弓-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th>
+                        <img src="~/lib/pic/重弩-(黑色文字圖透明背景)_1.png" width="60" />
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.系列名稱)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.大劍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.單手劍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.大錘)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.長槍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.斬擊斧)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.操蟲棍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.輕弩)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.太刀)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.雙劍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.狩獵笛)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.銃槍)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.充能斧)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.弓)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.重弩)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">
+
+                                <img src="~/lib/pic/編輯-(黑色文字圖透明背景)_1.png" width="30" />
+                            </a> 
+                            @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                            <a asp-action="Delete" asp-route-id="@item.Id">
+                                <img src="~/lib/pic/刪除-(黑色文字圖透明背景)_1.png"   width="30"/>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+   

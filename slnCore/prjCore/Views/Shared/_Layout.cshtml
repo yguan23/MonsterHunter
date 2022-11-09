@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 魔物獵人資料系統</title> @*網頁頁籤標題*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 active">
+            <div class="container-fluid" style="background-color: #CDBA96; ">
+                @*拉一圖層作為標題列，並令寬度為100%及設定背景顏色*@
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    @*連接Home控制器的Index*@
+                    <img src="~/lib/pic/魔物獵人資料系統-(黑色文字圖透明背景).png" width="450" />
+                </a>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse ">
+                    <ul class=" flex-grow-1 nav">
+                        @*建立清單*@
+                        <li class="nav-item" id="/Armor/Index">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個防具列表按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark" href="/Armor/Index">
+                                    @*連接至Armor控制器的Index*@
+                                    <img src="~/lib/pic/防具列表-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+
+                        <li class="nav-item">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個防具新增按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark  " href="/Armor/Create">
+                                    @*連接至Armor控制器的Create*@
+
+                                    <img src="~/lib/pic/防具新增-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個武器列表按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark" href="/Weapon/Index">
+                                    @*連接至Weapon控制器的Index*@
+                                    <img src="~/lib/pic/武器列表-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個武器新增按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark" href="/Weapon/Create">
+                                    @*連接至Weapon控制器的Create*@
+                                    <img src="~/lib/pic/武器新增-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個魔物列表按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark" href="/Monster/Index">
+                                    @*連接至Monster控制器的Index*@
+                                    <img src="~/lib/pic/魔物列表-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            @*清單項目*@
+                            <button class="btn btn-outline-light" style="border:none">
+                                @*建立一個魔物新增按鈕，並隱藏邊線*@
+                                <a class="nav-link text-dark" href="/Monster/Create">
+                                    @*連接至Monster控制器的Create*@
+                                    <img src="~/lib/pic/魔物新增-(黑色文字圖透明背景)_1.png" width="130" />
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">@*底標*@
+        <div class="container">
+            &copy; 2022 - 魔物獵人資料系統 -
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" >一個句號資訊科技股份有限公司</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

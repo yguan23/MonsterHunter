@@ -1,0 +1,115 @@
+﻿@model prjCore.Models.Weapon
+
+@{
+    ViewData["Title"] = "刪除武器";
+}
+
+<h1>
+    <img src="~/lib/pic/刪除武器-(黑色文字圖透明背景)_1.png" width="150" />
+</h1>
+
+<div>
+    <h4>
+        <img src="~/lib/pic/確定要刪除這個-(黑色文字圖透明背景)_1.png" height="50" />
+        <img src="~/lib/pic/武器_-(黑色文字圖透明背景)_1.png" height="50" />
+    </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.系列名稱)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.系列名稱)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.大劍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.大劍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.單手劍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.單手劍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.大錘)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.大錘)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.長槍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.長槍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.斬擊斧)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.斬擊斧)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.操蟲棍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.操蟲棍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.輕弩)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.輕弩)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.太刀)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.太刀)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.雙劍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.雙劍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.狩獵笛)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.狩獵笛)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.銃槍)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.銃槍)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.充能斧)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.充能斧)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.弓)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.弓)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.重弩)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.重弩)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="刪除" class="btn btn-danger" />
+        <a asp-action="Index"><img src="~/lib/pic/返回武器列表-(黑色文字圖透明背景)_1.png" width="100" /></a>
+    </form>
+</div>
