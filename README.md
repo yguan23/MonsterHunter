@@ -9,7 +9,7 @@ Creating a user-friendly querying system by ASP.NET allowing users to use querie
 Also, users have the ability to utilize CRUD functionalities to edit the database.
   
 ![image](https://user-images.githubusercontent.com/103955839/200906390-76310c86-cffb-4bb2-b641-7788dbc6dee9.png)   
-↑資料庫資料Databae   
+↑資料庫資料Database   
 
 ![104-5](https://user-images.githubusercontent.com/103955839/200917453-5bcc2de9-e064-4c7d-8675-e7f4ba216f2a.png)   
 ↑起始畫面Srart Page    
